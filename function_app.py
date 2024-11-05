@@ -4,8 +4,8 @@ from typing import List
 
 app = func.FunctionApp()
 
-@app.event_hub_message_trigger(arg_name="azeventhub", event_hub_name="workinghub001",
-                               connection="tenghetestforallehusage_RootManageSharedAccessKey_EVENTHUB") 
+@app.event_hub_message_trigger(arg_name="azeventhub", event_hub_name="eventhub-func-test",
+                               connection="haileyeventhubfunctest_RootManageSharedAccessKey_EVENTHUB") 
 def eventhub_trigger(azeventhub: func.EventHubEvent):
     #logging.info('Python EventHub trigger processed an event: %s',
                 #azeventhub.get_body().decode('utf-8'))
